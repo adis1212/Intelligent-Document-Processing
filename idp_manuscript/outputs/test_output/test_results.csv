@@ -1,0 +1,2 @@
+filename,quality_score,page_number,ocr_confidence,final_score,status,blur_status,skew_status
+test_001.png,85,1,78.5,85.4,READY,OK,OK

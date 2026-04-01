@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-30T14:37:00.220154",
+    "system": "IDP Manuscript Processing System",
+    "version": "1.0.0"
+  },
+  "batch_summary": {
+    "total_images": 1,
+    "ready": 1,
+    "review": 0,
+    "rejected": 0
+  },
+  "results": [
+    {
+      "filename": "test_001.png",
+      "quality_score": 85,
+      "page_number": 1,
+      "ocr_confidence": 78.5,
+      "final_score": 85.4,
+      "status": "READY",
+      "blur_status": "OK",
+      "skew_status": "OK"
+    }
+  ]
+}

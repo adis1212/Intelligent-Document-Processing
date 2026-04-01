@@ -1,0 +1,59 @@
+============================================================
+TEST 1: Preprocessor Module
+============================================================
+  Original size:  (400, 500)
+  Processed size: (400, 500)
+  Steps: ['grayscale', 'resized', 'denoised', 'enhanced']
+  >> PASSED
+
+============================================================
+TEST 2: Quality Checker Module
+============================================================
+  Sharp image blur score: 2994.01
+  Blurry image blur score: 1.43
+  Skew angle: 0.0 deg
+  Quality score: 100/100
+  Overall status: PASS ✅
+  >> PASSED
+
+============================================================
+TEST 3: Sequence Detector Module
+============================================================
+  manuscript_page_001.png -> Page 1 (filename_primary)
+  manuscript_page_002.png -> Page 2 (filename_primary)
+  manuscript_page_003.png -> Page 3 (filename_primary)
+  manuscript_page_005.png -> Page 5 (filename_primary)
+  manuscript_page_006.png -> Page 6 (filename_primary)
+  Missing pages: [4]
+  >> PASSED
+
+============================================================
+TEST 4: OCR Engine Module
+============================================================
+OCR extraction failed: tesseract is not installed or it's not in your PATH. See README file for more information.
+OCR extraction failed: tesseract is not installed or it's not in your PATH. See README file for more information.
+  OCR success: False
+  (Tesseract not installed - fallback mode OK)
+  Keywords: [('heritage', 2), ('manuscript', 1), ('ancient', 1), ('calligraphy', 1), ('text', 1)]
+  Script detected: {'script': 'Latin', 'confidence': 'High'}
+  >> PASSED
+
+============================================================
+TEST 5: Aggregator Module
+============================================================
+  test_001.png: final=85.4, status=READY ✅
+  test_002.png: final=54.0, status=REVIEW ⚠️
+  Batch: total=2, ready=1, pass_rate=50.0%
+  >> PASSED
+
+============================================================
+TEST 6: Output Generator Module
+============================================================
+  CSV: D:\edi\Intelligent Document Processing\Intelligent-Document-Processing\idp_manuscript\outputs\test_run\test.csv
+  JSON: D:\edi\Intelligent Document Processing\Intelligent-Document-Processing\idp_manuscript\outputs\test_run\test.json
+  >> PASSED
+
+============================================================
+RESULTS: 6 passed, 0 failed, 6 total
+ALL MODULE TESTS PASSED!
+============================================================

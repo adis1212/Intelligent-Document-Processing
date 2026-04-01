@@ -1,0 +1,93 @@
+﻿python : OCR extraction 
+failed: tesseract is not 
+installed or it's not in 
+your PATH. See README file 
+for more information.
+At line:1 char:22
++ $env:PYTHONUTF8="1"; 
+python 
+tests/test_modules.py 2>&1 
+| Out-File -Fi ...
++                      ~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo         
+     : NotSpecified: (OCR  
+   extraction ...re info   
+ rmation.:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+Using fallback OCR mode: 
+OCR Error: tesseract is 
+not installed or it's not 
+in your PATH. See README 
+file for more information.
+
+============================================================
+  IDP Manuscript Processing -- Test Suite
+============================================================
+
+==================================================
+TEST: Preprocessor Module
+==================================================
+  [OK] Original size:  (400, 500)
+  [OK] Processed size: (400, 500)
+  [OK] Steps: ['grayscale', 'resized', 'denoised', 'enhanced']
+  [PASS] Preprocessor Module -- ALL TESTS PASSED
+
+==================================================
+TEST: Quality Checker Module
+==================================================
+  Sharp image blur score: 2848.2
+  Is blurred: False
+  Blurry image blur score: 1.41
+  Is blurred: True
+  Skew angle: 0.0 degrees
+  Quality score: 100
+  Overall status: PASS Γ£à
+  [PASS] Quality Checker Module -- ALL TESTS PASSED
+
+==================================================
+TEST: Sequence Detector Module
+==================================================
+  manuscript_page_001.png -> Page 1 (filename_primary)
+  manuscript_page_002.png -> Page 2 (filename_primary)
+  manuscript_page_003.png -> Page 3 (filename_primary)
+  manuscript_page_005.png -> Page 5 (filename_primary)
+  manuscript_page_006.png -> Page 6 (filename_primary)
+  Missing pages: [4]
+  Range: (1, 6)
+  [PASS] Sequence Detector Module -- ALL TESTS PASSED
+
+==================================================
+TEST: OCR Engine Module
+==================================================
+  OCR success: False
+  [INFO] Tesseract not installed - fallback mode active (this is OK)
+  Fallback text: [OCR Fallback] OCR Error: tesseract is not installed or it's not in your PATH. S...
+  Keywords from sample: [('heritage', 2), ('manuscript', 2), ('ancient', 1), ('calligraphy', 1), ('text', 1), ('document', 1)]
+  Script detection: {'script': 'Latin', 'confidence': 'High'}
+  [PASS] OCR Engine Module -- ALL TESTS PASSED
+
+==================================================
+TEST: Aggregator Module
+==================================================
+  test_001.png: score=85.4, status=READY Γ£à
+  test_002.png: score=54.0, status=REVIEW ΓÜá∩╕Å
+  Batch summary: total=2, ready=1, review=1, rejected=0, pass_rate=50.0%
+  [PASS] Aggregator Module -- ALL TESTS PASSED
+
+==================================================
+TEST: Output Generator Module
+==================================================
+  CSV generated: D:\edi\Intelligent Document Processing\Intelligent-Document-Processing\idp_manuscript\outputs\test_output\test_results.csv
+  JSON generated: D:\edi\Intelligent Document Processing\Intelligent-Document-Processing\idp_manuscript\outputs\test_output\test_audit.json
+  JSON system: IDP Manuscript Processing System
+  [PASS] Output Generator Module -- ALL TESTS PASSED
+
+============================================================
+  RESULTS: 6 passed, 0 failed, 6 total
+  ALL MODULE TESTS PASSED SUCCESSFULLY!
+============================================================

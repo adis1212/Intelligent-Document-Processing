@@ -1,0 +1,47 @@
+# IDP Manuscript Processing System Configuration
+# ================================================
+
+# Preprocessing Settings
+preprocessing:
+  target_size: [1024, 1024]          # Resize target (width, height)
+  denoise_strength: 10               # Non-local means denoising strength
+  contrast_clip_limit: 2.0           # CLAHE clip limit
+  contrast_tile_size: [8, 8]         # CLAHE grid size
+  supported_formats: [".jpg", ".jpeg", ".png", ".tiff", ".tif", ".bmp"]
+
+# Quality Check Thresholds
+quality:
+  blur_threshold: 100.0              # Laplacian variance below this = blurred
+  skew_threshold: 5.0                # Degrees; above this = skewed
+  crop_margin_percent: 2.0           # Minimum margin percentage
+  min_quality_score: 50.0            # Minimum acceptable quality score (0-100)
+  occlusion_dark_threshold: 30       # Pixel intensity for occlusion detection
+  occlusion_area_percent: 15.0       # Max % area that can be occluded
+
+# Sequence Detection
+sequence:
+  filename_pattern: "page_(\\d+)"    # Regex to extract page number from filename
+  fallback_pattern: "(\\d+)"         # Fallback regex
+
+# OCR Settings
+ocr:
+  language: "eng"                    # Tesseract language
+  confidence_threshold: 60.0         # Minimum confidence score
+  psm_mode: 6                        # Page segmentation mode
+  oem_mode: 3                        # OCR Engine mode
+
+# Aggregation
+aggregation:
+  ready_threshold: 70.0              # Above this = READY
+  review_threshold: 40.0             # Between review and ready = REVIEW, below = REJECT
+
+# Output Settings
+output:
+  csv_filename: "processing_results.csv"
+  json_filename: "audit_log.json"
+  output_dir: "outputs"
+
+# Logging
+logging:
+  level: "INFO"
+  log_file: "idp_manuscript.log"

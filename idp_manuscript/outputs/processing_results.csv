@@ -1,0 +1,7 @@
+filename,quality_score,page_number,ocr_confidence,final_score,status,blur_status,skew_status
+manuscript_page_001.png,95.0,1,0.0,58.0,REVIEW ⚠️,OK,OK
+manuscript_page_002.png,95.0,2,0.0,58.0,REVIEW ⚠️,OK,OK
+manuscript_page_003.png,40.3,3,0.0,36.1,REJECT ❌,BLURRED,OK
+manuscript_page_004.png,95.0,4,0.0,58.0,REVIEW ⚠️,OK,OK
+manuscript_page_005.png,71.2,5,0.0,48.5,REVIEW ⚠️,OK,SKEWED
+manuscript_page_006.png,95.0,6,0.0,58.0,REVIEW ⚠️,OK,OK

@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "generated_at": "2026-04-01T02:50:29.189389",
+    "system": "IDP Manuscript Processing System",
+    "version": "1.0.0"
+  },
+  "batch_summary": {
+    "total_images": 6,
+    "ready": 0,
+    "review": 5,
+    "rejected": 1,
+    "avg_quality_score": 81.9,
+    "avg_ocr_confidence": 0.0,
+    "avg_final_score": 52.8,
+    "pass_rate": 0.0
+  },
+  "results": [
+    {
+      "filename": "manuscript_page_001.png",
+      "quality_score": 95.0,
+      "page_number": 1,
+      "ocr_confidence": 0.0,
+      "final_score": 58.0,
+      "status": "REVIEW ⚠️",
+      "blur_status": "OK",
+      "skew_status": "OK"
+    },
+    {
+      "filename": "manuscript_page_002.png",
+      "quality_score": 95.0,
+      "page_number": 2,
+      "ocr_confidence": 0.0,
+      "final_score": 58.0,
+      "status": "REVIEW ⚠️",
+      "blur_status": "OK",
+      "skew_status": "OK"
+    },
+    {
+      "filename": "manuscript_page_003.png",
+      "quality_score": 40.3,
+      "page_number": 3,
+      "ocr_confidence": 0.0,
+      "final_score": 36.1,
+      "status": "REJECT ❌",
+      "blur_status": "BLURRED",
+      "skew_status": "OK"
+    },
+    {
+      "filename": "manuscript_page_004.png",
+      "quality_score": 95.0,
+      "page_number": 4,
+      "ocr_confidence": 0.0,
+      "final_score": 58.0,
+      "status": "REVIEW ⚠️",
+      "blur_status": "OK",
+      "skew_status": "OK"
+    },
+    {
+      "filename": "manuscript_page_005.png",
+      "quality_score": 71.2,
+      "page_number": 5,
+      "ocr_confidence": 0.0,
+      "final_score": 48.5,
+      "status": "REVIEW ⚠️",
+      "blur_status": "OK",
+      "skew_status": "SKEWED"
+    },
+    {
+      "filename": "manuscript_page_006.png",
+      "quality_score": 95.0,
+      "page_number": 6,
+      "ocr_confidence": 0.0,
+      "final_score": 58.0,
+      "status": "REVIEW ⚠️",
+      "blur_status": "OK",
+      "skew_status": "OK"
+    }
+  ]
+}

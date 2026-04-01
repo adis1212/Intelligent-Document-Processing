@@ -1,0 +1,82 @@
+﻿python : OCR extraction 
+failed: tesseract is not 
+installed or it's not in 
+your PATH. See README file 
+for more information.
+At line:1 char:73
++ ... env:PYTHONUTF8="1"; 
+python -X utf8 
+tests/test_modules.py 2>&1 
+| Out-F ...
++                         ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (OCR  
+   extraction ...re info   
+ rmation.:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+Using fallback OCR mode: 
+OCR Error: tesseract is 
+not installed or it's not 
+in your PATH. See README 
+file for more information.
+≡ƒº¬ IDP Manuscript Processing ΓÇö Test Suite
+============================================================
+
+==================================================
+TEST: Preprocessor Module
+==================================================
+  Γ£à Original size:  (400, 500)
+  Γ£à Processed size: (400, 500)
+  Γ£à Steps: ['grayscale', 'resized', 'denoised', 'enhanced']
+  Γ£à Preprocessor Module ΓÇö ALL TESTS PASSED
+
+==================================================
+TEST: Quality Checker Module
+==================================================
+  Sharp image blur score: 2848.2
+  Is blurred: False
+  Blurry image blur score: 1.41
+  Is blurred: True
+  Quality score: 100
+  Overall status: PASS Γ£à
+  Γ£à Quality Checker Module ΓÇö ALL TESTS PASSED
+
+==================================================
+TEST: Sequence Detector Module
+==================================================
+  manuscript_page_001.png ΓåÆ Page 1 (filename_primary)
+  manuscript_page_002.png ΓåÆ Page 2 (filename_primary)
+  manuscript_page_003.png ΓåÆ Page 3 (filename_primary)
+  manuscript_page_005.png ΓåÆ Page 5 (filename_primary)
+  manuscript_page_006.png ΓåÆ Page 6 (filename_primary)
+  Missing pages: [4]
+  Range: (1, 6)
+  Γ£à Sequence Detector Module ΓÇö ALL TESTS PASSED
+
+==================================================
+TEST: OCR Engine Module
+==================================================
+  Text extracted: [OCR Fallback] OCR Error: tesseract is not installed or it's not in your PATH. See README file for m...
+  Confidence: 0.0%
+  Word count: 0
+  Script: {'script': 'Latin', 'confidence': 'High'}
+  Keywords: [('heritage', 2), ('manuscript', 2), ('ancient', 1), ('calligraphy', 1), ('text', 1), ('document', 1)]
+  Script detection: {'script': 'Latin', 'confidence': 'High'}
+  Γ£à OCR Engine Module ΓÇö ALL TESTS PASSED
+
+==================================================
+TEST: Aggregator Module
+==================================================
+  test_001.png: score=85.4, status=READY Γ£à
+  test_002.png: score=54.0, status=REVIEW ΓÜá∩╕Å
+  Summary: {'total_images': 2, 'ready': 1, 'review': 1, 'rejected': 0, 'avg_quality_score': 62.5, 'avg_ocr_confidence': 61.8, 'avg_final_score': 69.7, 'pass_rate': 50.0}
+  Γ£à Aggregator Module ΓÇö ALL TESTS PASSED
+
+============================================================
+≡ƒÄë ALL MODULE TESTS PASSED SUCCESSFULLY!
+============================================================
