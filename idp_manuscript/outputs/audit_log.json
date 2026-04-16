@@ -1,79 +1,97 @@
 {
   "metadata": {
-    "generated_at": "2026-04-01T02:50:29.189389",
+    "generated_at": "2026-04-12T00:04:39.187361",
     "system": "IDP Manuscript Processing System",
     "version": "1.0.0"
   },
   "batch_summary": {
     "total_images": 6,
-    "ready": 0,
-    "review": 5,
-    "rejected": 1,
+    "ready": 4,
+    "review": 2,
+    "rejected": 0,
     "avg_quality_score": 81.9,
-    "avg_ocr_confidence": 0.0,
-    "avg_final_score": 52.8,
-    "pass_rate": 0.0
+    "avg_ocr_confidence": 81.8,
+    "avg_final_score": 85.5,
+    "pass_rate": 66.7
   },
   "results": [
     {
       "filename": "manuscript_page_001.png",
       "quality_score": 95.0,
       "page_number": 1,
-      "ocr_confidence": 0.0,
-      "final_score": 58.0,
-      "status": "REVIEW ⚠️",
+      "ocr_confidence": 83.0,
+      "final_score": 91.2,
+      "status": "READY ✅",
       "blur_status": "OK",
-      "skew_status": "OK"
+      "skew_status": "OK",
+      "quality_component": 38.0,
+      "ocr_component": 33.2,
+      "sequence_component": 20.0
     },
     {
       "filename": "manuscript_page_002.png",
       "quality_score": 95.0,
       "page_number": 2,
-      "ocr_confidence": 0.0,
-      "final_score": 58.0,
-      "status": "REVIEW ⚠️",
+      "ocr_confidence": 84.7,
+      "final_score": 91.9,
+      "status": "READY ✅",
       "blur_status": "OK",
-      "skew_status": "OK"
+      "skew_status": "OK",
+      "quality_component": 38.0,
+      "ocr_component": 33.9,
+      "sequence_component": 20.0
     },
     {
       "filename": "manuscript_page_003.png",
       "quality_score": 40.3,
       "page_number": 3,
-      "ocr_confidence": 0.0,
-      "final_score": 36.1,
-      "status": "REJECT ❌",
+      "ocr_confidence": 67.6,
+      "final_score": 63.1,
+      "status": "REVIEW ⚠️",
       "blur_status": "BLURRED",
-      "skew_status": "OK"
+      "skew_status": "OK",
+      "quality_component": 16.1,
+      "ocr_component": 27.0,
+      "sequence_component": 20.0
     },
     {
       "filename": "manuscript_page_004.png",
       "quality_score": 95.0,
       "page_number": 4,
-      "ocr_confidence": 0.0,
-      "final_score": 58.0,
-      "status": "REVIEW ⚠️",
+      "ocr_confidence": 83.6,
+      "final_score": 91.4,
+      "status": "READY ✅",
       "blur_status": "OK",
-      "skew_status": "OK"
+      "skew_status": "OK",
+      "quality_component": 38.0,
+      "ocr_component": 33.4,
+      "sequence_component": 20.0
     },
     {
       "filename": "manuscript_page_005.png",
       "quality_score": 71.2,
       "page_number": 5,
-      "ocr_confidence": 0.0,
-      "final_score": 48.5,
+      "ocr_confidence": 85.8,
+      "final_score": 82.8,
       "status": "REVIEW ⚠️",
       "blur_status": "OK",
-      "skew_status": "SKEWED"
+      "skew_status": "SKEWED",
+      "quality_component": 28.5,
+      "ocr_component": 34.3,
+      "sequence_component": 20.0
     },
     {
       "filename": "manuscript_page_006.png",
       "quality_score": 95.0,
       "page_number": 6,
-      "ocr_confidence": 0.0,
-      "final_score": 58.0,
-      "status": "REVIEW ⚠️",
+      "ocr_confidence": 85.8,
+      "final_score": 92.3,
+      "status": "READY ✅",
       "blur_status": "OK",
-      "skew_status": "OK"
+      "skew_status": "OK",
+      "quality_component": 38.0,
+      "ocr_component": 34.3,
+      "sequence_component": 20.0
     }
   ]
 }

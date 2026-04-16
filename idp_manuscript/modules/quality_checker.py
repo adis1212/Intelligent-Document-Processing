@@ -271,13 +271,19 @@ def run_quality_check(image, config=None):
     """
     Run all 4 quality checks and compute the composite score.
 
+    Skew impact: If skew is detected (angle > threshold), the overall
+    status is capped at "REVIEW" — it can never be "PASS" while skewed.
+    This ensures skewed pages are always flagged for manual inspection.
+
     Returns a dict with full results from every check.
     """
     if config is None:
         config = {}
 
+    skew_threshold = config.get("skew_threshold", 5.0)
+
     blur_r  = check_blur(image, config.get("blur_threshold", 100.0))
-    skew_r  = check_skew(image, config.get("skew_threshold", 3.0))
+    skew_r  = check_skew(image, skew_threshold)
     crop_r  = check_crop(image, config.get("crop_margin_percent", 2.0))
     occ_r   = check_occlusion(image,
                                config.get("occlusion_dark_threshold", 30),
@@ -286,11 +292,26 @@ def run_quality_check(image, config=None):
     q_score = compute_quality_score(blur_r, skew_r, crop_r, occ_r)
     min_score = config.get("min_quality_score", 50.0)
 
+    # --- Determine overall status with skew override ---
+    if q_score >= min_score:
+        overall = "PASS"
+    else:
+        overall = "FAIL"
+
+    # If skew detected, cap status at REVIEW (never PASS while skewed)
+    if skew_r.get("is_skewed", False) and overall == "PASS":
+        overall = "REVIEW"
+        logger.info(f"Skew override: score={q_score} would be PASS, "
+                     f"but skew={skew_r['skew_angle']}° > {skew_threshold}° → REVIEW")
+
+    # Store threshold in skew result for dashboard display
+    skew_r["threshold_used"] = skew_threshold
+
     return {
-        "blur":         blur_r,
-        "skew":         skew_r,
-        "crop":         crop_r,
-        "occlusion":    occ_r,
+        "blur":           blur_r,
+        "skew":           skew_r,
+        "crop":           crop_r,
+        "occlusion":      occ_r,
         "quality_score":  q_score,
-        "overall_status": "PASS" if q_score >= min_score else "FAIL",
+        "overall_status": overall,
     }
